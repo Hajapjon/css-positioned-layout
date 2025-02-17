@@ -1,1 +1,81 @@
-/* Start coding here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /* Header */
+
+.header {
+    background-color: gray;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+/* Chat container */
+.chat-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Left Chat Messages */
+.chat-box-left {
+    width: 200px;
+    position: relative;
+    top: 120px;
+}
+
+.chat-left {
+    background-color: grey;
+    margin: 10px;
+    border-radius: 100px;
+    padding: 5px;
+}
+
+/* Right Chat Messages  */
+.chat-box-right {
+    width: 200px;
+    position: relative;
+}
+
+.chat-right {
+    background-color: rgb(93, 199, 51);
+    margin: 10px;
+    border-radius: 100px;
+    padding: 5px;
+}
+
+.chat-right-middle {
+    background-color: rgb(219, 219, 219);
+    margin: 10px;
+    border-radius: 100px;
+    padding: 5px;
+    position: relative;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: -3px;
+    right: -5px;
+    background-color: rgb(173, 173, 173);
+    color: white;
+    border: none;
+    font-size: 0.5rem;
+    cursor: pointer;
+    padding: 3px 4px;
+    border-radius: 50%;
+  }
+
+  /* Chat tail */
+.tail::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    width: 10px;
+    height: 15px;
+    background-color: rgb(93, 199, 51);
+    clip-path: polygon(80% 0, 0 100%, 100% 100%);
+  }
