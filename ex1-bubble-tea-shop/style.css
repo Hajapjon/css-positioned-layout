@@ -1,5 +1,57 @@
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000;
   font-family: "Kanit";
+
 }
 
-/* Start coding here */
+.banner {
+  position: relative;
+  width: 500px; 
+  border: 5px solid #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+}
+
+
+.tag {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  background: rgba(128, 128, 128, 0.9);
+  color: white;
+  padding: 5px 15px;
+  font-size: 18px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+
+.text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.text a {
+  color: white;
+  text-decoration: none;
+}
+
+.text a:hover {
+  text-decoration: underline;
+}
