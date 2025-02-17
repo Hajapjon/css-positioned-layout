@@ -1,5 +1,60 @@
-body {
-  font-family: "Kanit";
-}
 
 /* Start coding here */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit"
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cafe-card {
+  border: 10px solid white;
+  background-color: white;
+  position: relative;
+}
+
+.cafe-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40%; /* ความสูงของ gradient */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  border-radius: 10px;
+}
+img {
+  border-radius: 10px;
+}
+
+.cafe-name {
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  color: white;
+  font-size: 1.3rem;
+  z-index: 2;
+}
+
+.location {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  background-color: hsla(0, 3%, 16%, 0.5);
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+}
+
+
+
