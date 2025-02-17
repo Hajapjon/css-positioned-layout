@@ -1,1 +1,113 @@
-/* Start coding here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.header {
+    width: 100%;
+    background: gray;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.chat-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.left-chat {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.left-message {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: rgb(138, 138, 138);
+    margin: 5px;
+    position: relative;
+}
+
+.right-chat {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-message {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 5px;
+    position: relative;
+    width: 200px;
+}
+
+.right-message.green {
+    background-color: #1bb80d;
+}
+
+.right-message.grey {
+    background-color: rgb(208, 208, 208);
+    position: relative;
+}
+
+.delete-btn-container {
+    display: flex;
+}
+
+.right-message.grey .delete-btn {
+    position: absolute;
+    top: 5px;  /* Align to the vertical center */
+    right: -5px; /* Adjust position to prevent overlap */
+    transform: translateY(-50%); /* Perfect vertical centering */
+    background: rgba(149, 149, 149, 0.8);
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Perfect circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    line-height: 1; /* Ensures perfect alignment of text inside */
+}
+
+
+
+/* Tail for Right Chat - Positioned on Top Right */
+.right-message.green::after {
+    content: "";
+    position: absolute;
+    top: -0px; /* Moves the tail upwards */
+    right: -2px; /* Positions the tail properly */
+    width: 20px;
+    height: 20px;
+    background: #1bb80d;
+    border-top-left-radius: 50px;
+    transform: rotate(180deg);
+}
+
+.right-message.grey::after {
+    content: "";
+    position: absolute;
+    top: -0px; /* Moves the tail upwards */
+    right: -2px; /* Positions the tail properly */
+    width: 20px;
+    height: 20px;
+    background: rgb(208, 208, 208);
+    border-top-left-radius: 50px;
+    transform: rotate(180deg);
+}
